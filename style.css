@@ -6,10 +6,11 @@
 }
 
 /* Palette verde: sustituye los azules por tonos verdes */
-:root{
+:root {
   --green-900: #4a5f8f;
   --green-700: #b8744f;
-  --green-600: #6db04f; /* usado en btn-confirmar */
+  --green-600: #6db04f;
+  /* usado en btn-confirmar */
   --green-500: #e8d758;
   --green-300: #f39c42;
   --green-100: #eef9ef;
@@ -19,8 +20,9 @@
 
 /* Reemplazos globales de color (sobrescriben tonos azules existentes) */
 header {
-  background-color: var(--green-100); /* antes: #e8f0ff */
-  border-bottom: 2px solid rgba(0,0,0,0.08);
+  background-color: var(--green-100);
+  /* antes: #e8f0ff */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
   text-align: center;
   padding: 1rem;
   position: sticky;
@@ -43,7 +45,8 @@ header {
 
 /* Estilo individual de cada logo */
 .logo {
-  height: 40px; /* reducido de 60px a 40px */
+  height: 40px;
+  /* reducido de 60px a 40px */
   width: auto;
   object-fit: contain;
   transition: transform 0.2s;
@@ -59,8 +62,10 @@ header {
   .header-top {
     gap: 1rem;
   }
+
   .logo {
-    height: 35px; /* reducido de 50px a 35px */
+    height: 35px;
+    /* reducido de 50px a 35px */
   }
 }
 
@@ -98,7 +103,8 @@ nav {
 
 .menu li a {
   text-decoration: none;
-  color: var(--green-600); /* antes: #004080 */
+  color: var(--green-600);
+  /* antes: #004080 */
   font-weight: bold;
 }
 
@@ -128,8 +134,8 @@ nav {
 }
 
 @media (max-width: 768px) {
-  
-  
+
+
   nav {
     position: relative;
     display: flex;
@@ -150,16 +156,17 @@ nav {
 
   .menu {
     position: absolute;
-    top: 100%; /* justo debajo del nav */
+    top: 100%;
+    /* justo debajo del nav */
     left: 0;
     width: 220px;
     background: #e8f0ff;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0;
     border-top: none;
-    transition: transform 0.4s cubic-bezier(.77,0,.18,1), opacity 0.3s;
+    transition: transform 0.4s cubic-bezier(.77, 0, .18, 1), opacity 0.3s;
     transform: translateX(-100%);
     opacity: 0;
     display: flex;
@@ -176,6 +183,7 @@ nav {
     #hamburger {
       display: none;
     }
+
     .menu {
       position: static;
       height: auto;
@@ -199,7 +207,8 @@ nav {
   justify-content: space-between;
   padding: 0 1rem;
   gap: 0;
-  height: 60px; /* Ajusta según el alto real de tu nav */
+  height: 60px;
+  /* Ajusta según el alto real de tu nav */
 }
 
 .main-nav ul {
@@ -210,25 +219,28 @@ nav {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 45%; /* alinea verticalmente con la hamburguesa */
+  top: 45%;
+  /* alinea verticalmente con la hamburguesa */
   left: -290px;
   width: 260px;
   height: auto;
   max-height: calc(100vh - 120px);
   background: #6db04f;
-  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.08);
   border-radius: 0 12px 12px 0;
   z-index: 999;
   align-items: flex-start;
   padding-top: 0.5rem;
-  transition: left 0.35s cubic-bezier(.77,0,.175,1);
+  transition: left 0.35s cubic-bezier(.77, 0, .175, 1);
   overflow: auto;
-  transform: translateY(-45%); /* centra verticalmente respecto al contenedor */
+  transform: translateY(-45%);
+  /* centra verticalmente respecto al contenedor */
 }
 
-.menu-toggle-checkbox:checked ~ ul {
+.menu-toggle-checkbox:checked~ul {
   left: 0;
-  transform: translateY(-38%); /* mantener centrado al mostrarse */
+  transform: translateY(-38%);
+  /* mantener centrado al mostrarse */
 }
 
 /* para pantallas más pequeñas también forzamos la misma altura */
@@ -247,7 +259,7 @@ nav {
   transition: opacity 0.25s, transform 0.25s;
 }
 
-.menu-toggle-checkbox:checked ~ ul li {
+.menu-toggle-checkbox:checked~ul li {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.08s;
@@ -276,7 +288,8 @@ nav {
 .main-nav ul li a:hover,
 .main-nav ul li a:active,
 .main-nav ul li a.selected {
-  background: rgba(0,115,35,0.08); /* sutil verde */
+  background: rgba(0, 115, 35, 0.08);
+  /* sutil verde */
   color: var(--green-600);
   border-radius: 0;
 }
@@ -301,6 +314,7 @@ nav {
   padding: 0;
   overflow: visible;
 }
+
 .hamburger span {
   display: block;
   height: 3px;
@@ -308,18 +322,22 @@ nav {
   background: #000000;
   margin: 3px 0;
   border-radius: 2px;
-  transition: transform 0.35s cubic-bezier(.77,0,.175,1), opacity 0.25s;
+  transition: transform 0.35s cubic-bezier(.77, 0, .175, 1), opacity 0.25s;
   position: relative;
 }
-.menu-toggle-checkbox:checked + .hamburger span:nth-child(1) {
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(1) {
   transform: translateY(7px) rotate(45deg) scale(0.85);
 }
-.menu-toggle-checkbox:checked + .hamburger span:nth-child(2) {
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(2) {
   opacity: 0;
 }
-.menu-toggle-checkbox:checked + .hamburger span:nth-child(3) {
+
+.menu-toggle-checkbox:checked+.hamburger span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg) scale(0.85);
 }
+
 .menu-toggle-checkbox {
   display: none;
 }
@@ -349,8 +367,9 @@ nav {
 .lang-flag.selected,
 .lang-flag:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border: 2px solid var(--green-600); /* antes azul */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--green-600);
+  /* antes azul */
 }
 
 /* Oculta el selector antiguo */
@@ -364,11 +383,12 @@ main {
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Justifica el texto y centra títulos y bloques */
-#content, #content * {
+#content,
+#content * {
   text-align: justify;
 }
 
@@ -382,7 +402,7 @@ main {
 }
 
 #content section,
-#content > div {
+#content>div {
   margin-left: auto;
   margin-right: auto;
 }
@@ -399,7 +419,8 @@ footer {
 /* 🌍 Overlay inicial */
 #lang-overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: #6db04f;
@@ -426,7 +447,7 @@ footer {
   text-decoration: none;
   font-weight: 700;
   display: inline-block;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .cta-link {
@@ -439,33 +460,80 @@ footer {
   padding: 0.7rem;
   background: #fbfbfb;
   border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 @media (max-width: 680px) {
-  .cta-button { padding: 0.5rem 0.7rem; font-size: 0.92rem; }
-  main { padding: 0.8rem; }
+  .cta-button {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.92rem;
+  }
+
+  main {
+    padding: 0.8rem;
+  }
 }
 
 /* estilos para encabezado de día (agenda) */
-.agenda-day .day-header { display:flex; justify-content:center; }
-.agenda-day .day-meta { max-width:820px; width:100%; padding:0.75rem 1rem; }
-.agenda-day .date-tag { font-weight:700; font-size:0.95rem; }
-.agenda-day .venue { font-size:1rem; letter-spacing:0.5px; }
-.agenda-day .day-title { font-size:1.18rem; }
-.agenda-day .day-subtitle { font-size:0.95rem; color:var(--muted); }
+.agenda-day .day-header {
+  display: flex;
+  justify-content: center;
+}
+
+.agenda-day .day-meta {
+  max-width: 820px;
+  width: 100%;
+  padding: 0.75rem 1rem;
+}
+
+.agenda-day .date-tag {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.agenda-day .venue {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.agenda-day .day-title {
+  font-size: 1.18rem;
+}
+
+.agenda-day .day-subtitle {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
 
 @media (max-width: 720px) {
-  .agenda-day .day-meta { padding:0.6rem 0.8rem; gap:0.35rem; }
-  .agenda-day .date-tag { font-size:0.9rem; padding:0.28rem 0.65rem; }
-  .agenda-day .venue { font-size:0.98rem; }
-  .agenda-day .day-title { font-size:1.02rem; }
-  .agenda-day .day-subtitle { font-size:0.9rem; }
+  .agenda-day .day-meta {
+    padding: 0.6rem 0.8rem;
+    gap: 0.35rem;
+  }
+
+  .agenda-day .date-tag {
+    font-size: 0.9rem;
+    padding: 0.28rem 0.65rem;
+  }
+
+  .agenda-day .venue {
+    font-size: 0.98rem;
+  }
+
+  .agenda-day .day-title {
+    font-size: 1.02rem;
+  }
+
+  .agenda-day .day-subtitle {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width:721px) {
-  .agenda-day .day-meta { gap: .6rem; }
+  .agenda-day .day-meta {
+    gap: .6rem;
+  }
 }
 
 .lang-popup {
@@ -506,8 +574,15 @@ footer {
 
 /* 🔁 Animación de entrada */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 📱 Estilos para móvil */
@@ -561,6 +636,7 @@ footer {
     transition: none;
     overflow: visible;
   }
+
   .main-nav ul li {
     border: none;
     width: auto;
@@ -568,11 +644,13 @@ footer {
     transform: none;
     transition: none;
   }
+
   .main-nav ul li a {
     text-align: center;
     padding: 1rem 0.7rem;
     border-radius: 8px;
   }
+
   .menu-toggle-checkbox,
   .hamburger {
     display: none;
@@ -582,7 +660,8 @@ footer {
 /* Ajusta la posición del menú hamburguesa en móvil */
 @media (max-width: 900px) {
   .main-nav ul {
-    top: 170px; /* Igual al alto del nav/hamburguesa */
+    top: 170px;
+    /* Igual al alto del nav/hamburguesa */
   }
 }
 
@@ -593,19 +672,21 @@ footer {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .agenda-slider {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* Relación 16:9 */
+  padding-bottom: 56.25%;
+  /* Relación 16:9 */
 }
 
 .slider-img {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -618,234 +699,297 @@ footer {
   opacity: 1;
   pointer-events: auto;
 }
+
 .vermadrid-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      padding: 0 1rem;
-    }
-    .vermadrid-item {
-      display: flex;
-      flex-wrap: wrap;
-      background: #ffffff;
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-      overflow: visible; /* importante: no recortar contenido */
-      align-items: stretch;
-      transition: box-shadow 0.2s;
-    }
-    .vermadrid-item:hover {
-      box-shadow: 0 4px 18px rgba(0,0,0,0.13);
-    }
-    .vermadrid-time {
-      background: linear-gradient(135deg, var(--green-600) 70%, #ffffff 100%); /* antes azul oscuro */
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 1.1rem;
-      min-width: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.2rem 1rem;
-      letter-spacing: 1px;
-      border-right: 4px solid #fff;
-    }
-    .vermadrid-num {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.1rem;
-      text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1px #fff;
-    }
-    .vermadrid-desc {
-      flex: 1 1 auto;
-      min-width: 0; /* evita que los hijos obliguen al bloque a crecer y provoquen overflow */
-      padding: 1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      justify-content: flex-start; /* corregido */
-      background: #ffffff;
-    }
-    .vermadrid-desc p {
-      margin: 0 0 0 0;
-      font-size: 0.9rem;
-      color: #222;
-    }
-    .artista-img {
-      width: 100%;
-      max-width: 340px;
-      height: auto;
-      border-radius: 10px;
-      margin: 0.5rem 0;
-      object-fit: cover;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.09);
-      align-self: flex-start;
-      display: block;
-    }
-    .btn-como-llegar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--green-600); /* antes: #19315e */
-      color: #ffffff;
-      padding: 0.35rem 0.9rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-      transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      letter-spacing: 1px;
-      text-align: center;
-      min-width: 110px;
-      max-width: 140px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .btn-como-llegar:hover {
-      background: var(--green-50, var(--green-100)); /* antes: #e8f0ff */
-      color: #000000;
-      transform: scale(1.05);
-    }
-    @media (max-width: 700px) {
-      .vermadrid-item {
-        flex-direction: column;
-      }
-      .vermadrid-time {
-        border-right: none;
-        border-bottom: 4px solid #fff;
-        min-width: unset;
-        width: 100%;
-        padding: 1rem 0.5rem;
-      }
-      .vermadrid-desc {
-        padding: 1rem 0.7rem;
-      }
-      .artista-img {
-        max-width: 100%;
-      }
-    }
-    .faqs-container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-    }
-    .faq-item {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #e0e0e0;
-      padding-bottom: 1rem;
-    }
-    .faq-question {
-      font-weight: bold;
-      color: #19315e;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-    .faq-question:hover {
-      color: #19315e;
-    }
-    .faq-answer {
-      font-size: 1.05rem;
-      color: #222;
-      line-height: 1.6;
-      margin-left: 0.5rem;
-    }
-     .btn-confirmar {
-      display: block;
-      margin: 2rem auto 1.5rem;
-      background: var(--green-600);
-      color: #fff;
-      padding: 0.8rem 1.6rem;      /* más alto y ancho para apariencia más suave */
-      border-radius: 999px;       /* forma totalmente redondeada (pill) */
-      font-size: 1rem;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(36,160,67,0.15);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-      letter-spacing: 1px;
-      min-width: 140px;
-      max-width: 240px;
-      border: none;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
 
-    .btn-confirmar:hover {
-      transform: translateY(-3px) scale(1.02);
-      background: var(--accent);
-      box-shadow: 0 12px 36px rgba(36,160,67,0.20);
-    }
+.vermadrid-item {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  overflow: visible;
+  /* importante: no recortar contenido */
+  align-items: stretch;
+  transition: box-shadow 0.2s;
+}
 
-    .btn-confirmar:focus {
-      outline: 3px solid rgba(28,186,62,0.18);
-      outline-offset: 2px;
-    }
+.vermadrid-item:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+}
 
-    #cookie-banner {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(18,18,20,0.96);
-      color: #fff;
-      z-index: 99999;
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      box-shadow: 0 -8px 24px rgba(0,0,0,0.3);
-    }
-    #cookie-banner .container {
-      width: 100%;
-      max-width: 1100px;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    #cookie-banner p {
-      margin: 0;
-      flex: 1 1 480px;
-      font-size: 0.98rem;
-      line-height: 1.3;
-      color: #f1f1f1;
-    }
-    .cookie-actions {
-      display: flex;
-      gap: .6rem;
-      flex: 0 0 auto;
-      align-items: center;
-    }
-    .cookie-btn {
-      padding: .45rem .9rem;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: .95rem;
-      min-width: 120px;
-      text-align: center;
-    }
-    .cookie-accept { background: #24a043; color: #fff; }
-    .cookie-reject { background: #c92a2a; color: #fff; }
-    .cookie-view   { background: #0d6efd; color: #fff; }
-    .cookie-btn:focus { outline: 3px solid rgba(255,255,255,0.12); }
+.vermadrid-time {
+  background: linear-gradient(135deg, var(--green-600) 70%, #ffffff 100%);
+  /* antes azul oscuro */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1rem;
+  letter-spacing: 1px;
+  border-right: 4px solid #fff;
+}
 
-    @media (max-width:640px){
-      #cookie-banner p { flex-basis: 100%; font-size: .95rem; }
-      .cookie-actions { width: 100%; justify-content: space-between; }
-      .cookie-btn { min-width: 30%; font-size: .9rem; }
-    }
+.vermadrid-num {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1px #fff;
+}
 
-    #cookie-banner.hidden {
-      display: none !important;
-    }
-    .legal-buttons {
+.vermadrid-desc {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* evita que los hijos obliguen al bloque a crecer y provoquen overflow */
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: flex-start;
+  /* corregido */
+  align-items: center;
+  /* Centra las imágenes y botones */
+  background: #ffffff;
+}
+
+.vermadrid-desc p {
+  margin: 0 0 0 0;
+  width: 100%;
+  /* Asegura que el texto ocupe todo el ancho */
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.artista-img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  align-self: center;
+  display: block;
+}
+
+.btn-como-llegar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--green-600);
+  /* antes: #19315e */
+  color: #ffffff;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  letter-spacing: 1px;
+  text-align: center;
+  min-width: 110px;
+  max-width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-como-llegar:hover {
+  background: var(--green-50, var(--green-100));
+  /* antes: #e8f0ff */
+  color: #000000;
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  .vermadrid-item {
+    flex-direction: column;
+  }
+
+  .vermadrid-time {
+    border-right: none;
+    border-bottom: 4px solid #fff;
+    min-width: unset;
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .vermadrid-desc {
+    padding: 1rem 0.7rem;
+  }
+
+  .artista-img {
+    max-width: 100%;
+  }
+}
+
+.faqs-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #19315e;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: #19315e;
+}
+
+.faq-answer {
+  font-size: 1.05rem;
+  color: #222;
+  line-height: 1.6;
+  margin-left: 0.5rem;
+}
+
+.btn-confirmar {
+  display: block;
+  margin: 2rem auto 1.5rem;
+  background: var(--green-600);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  /* más alto y ancho para apariencia más suave */
+  border-radius: 999px;
+  /* forma totalmente redondeada (pill) */
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(36, 160, 67, 0.15);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  letter-spacing: 1px;
+  min-width: 140px;
+  max-width: 240px;
+  border: none;
+}
+
+.btn-confirmar:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: var(--accent);
+  box-shadow: 0 12px 36px rgba(36, 160, 67, 0.20);
+}
+
+.btn-confirmar:focus {
+  outline: 3px solid rgba(28, 186, 62, 0.18);
+  outline-offset: 2px;
+}
+
+#cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 20, 0.96);
+  color: #fff;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#cookie-banner .container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#cookie-banner p {
+  margin: 0;
+  flex: 1 1 480px;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: #f1f1f1;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: .6rem;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.cookie-btn {
+  padding: .45rem .9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .95rem;
+  min-width: 120px;
+  text-align: center;
+}
+
+.cookie-accept {
+  background: #24a043;
+  color: #fff;
+}
+
+.cookie-reject {
+  background: #c92a2a;
+  color: #fff;
+}
+
+.cookie-view {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.cookie-btn:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width:640px) {
+  #cookie-banner p {
+    flex-basis: 100%;
+    font-size: .95rem;
+  }
+
+  .cookie-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cookie-btn {
+    min-width: 30%;
+    font-size: .9rem;
+  }
+}
+
+#cookie-banner.hidden {
+  display: none !important;
+}
+
+.legal-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -857,7 +1001,8 @@ footer {
 
 .btn-legal {
   display: inline-block;
-  background: var(--green-700); /* antes: #19315e */
+  background: var(--green-700);
+  /* antes: #19315e */
   color: #fff;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
@@ -865,7 +1010,7 @@ footer {
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   transition: background 0.2s, transform 0.2s;
   letter-spacing: 0.5px;
   min-width: 100px;
@@ -873,7 +1018,8 @@ footer {
 }
 
 .btn-legal:hover {
-  background: var(--accent); /* antes: azul hover */
+  background: var(--accent);
+  /* antes: azul hover */
   color: #fff;
   transform: scale(1.05);
 }
@@ -882,7 +1028,7 @@ footer {
   .legal-buttons {
     gap: 0.5rem;
   }
-  
+
   .btn-legal {
     font-size: 0.7rem;
     padding: 0.25rem 0.5rem;
@@ -905,25 +1051,29 @@ footer {
   justify-content: center;
   align-items: center;
   background: #fff;
-  border: 1px solid var(--green-900); /* antes azul */
+  border: 1px solid var(--green-900);
+  /* antes azul */
   border-radius: 50%;
   color: var(--green-900);
   transition: all 0.2s ease;
   padding: 0.15rem;
 }
 
-.calendar-day div:nth-child(1) { /* Día semana */
+.calendar-day div:nth-child(1) {
+  /* Día semana */
   font-size: 0.6rem;
   margin-bottom: -2px;
 }
 
-.calendar-day div:nth-child(2) { /* Número */
+.calendar-day div:nth-child(2) {
+  /* Número */
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: -2px;
 }
 
-.calendar-day div:nth-child(3) { /* Mes */
+.calendar-day div:nth-child(3) {
+  /* Mes */
   font-size: 0.6rem;
 }
 
@@ -938,18 +1088,27 @@ footer {
     width: 40px;
     height: 40px;
   }
-  
-  .calendar-day div:nth-child(1) { font-size: 0.55rem; }
-  .calendar-day div:nth-child(2) { font-size: 0.85rem; }
-  .calendar-day div:nth-child(3) { font-size: 0.55rem; }
+
+  .calendar-day div:nth-child(1) {
+    font-size: 0.55rem;
+  }
+
+  .calendar-day div:nth-child(2) {
+    font-size: 0.85rem;
+  }
+
+  .calendar-day div:nth-child(3) {
+    font-size: 0.55rem;
+  }
 }
+
 .agenda-day {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
 .day-header {
@@ -962,7 +1121,8 @@ footer {
 }
 
 .date-tag {
-  background: var(--green-700); /* antes oscuro azul */
+  background: var(--green-700);
+  /* antes oscuro azul */
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
@@ -1026,11 +1186,11 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .time-tag {
     align-self: flex-start;
   }
-  
+
   .check-mark {
     top: 1rem;
     transform: none;
@@ -1040,7 +1200,21 @@ footer {
 /* Usar Montserrat en todo el sitio */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700,600,500,400,300&display=swap');
 
-html, body, input, textarea, select, button, a, p, li, h1, h2, h3, h4, h5, h6 {
+html,
+body,
+input,
+textarea,
+select,
+button,
+a,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Montserrat", sans-serif !important;
 }
 
@@ -1052,10 +1226,16 @@ body {
 }
 
 /* Mantener estilos específicos de encabezados si ya existen */
-h1, h2, h3 { font-weight: 700; }
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
 
 /* Reset box-sizing para evitar que elementos flex desborden */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -1066,50 +1246,7 @@ h1, h2, h3 { font-weight: 700; }
 #content {
   text-align: justify;
 }
+
 #content * {
   text-align: inherit;
-}
-
-/* Ajustes para los items vermadrid: permitir que el contenido se encoja
-   correctamente en flexbox y evitar recorte de imagen/texto. */
-.vermadrid-item {
-  display: flex;
-  flex-wrap: wrap;
-  background: #f7faff;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-  overflow: visible; /* importante: no recortar contenido */
-  align-items: stretch;
-  transition: box-shadow 0.2s;
-}
-
-/* Contenedor de texto: permitir shrink en flex (min-width:0) */
-.vermadrid-desc {
-  flex: 1 1 auto;
-  min-width: 0; /* evita que los hijos obliguen al bloque a crecer y provoquen overflow */
-  padding: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  justify-content: flex-start; /* corregido */
-}
-
-/* Asegurar que las imágenes sean completamente responsivas */
-.artista-img {
-  width: 100%;
-  max-width: 340px;
-  height: auto;
-  border-radius: 10px;
-  margin: 0.5rem 0;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
-  align-self: flex-start;
-  display: block;
-}
-
-/* si usas un contenedor de imagen a la derecha, permitir que no se recorte */
-.vermadrid-time,
-.vermadrid-desc,
-.artista-img {
-  box-sizing: border-box;
 }
