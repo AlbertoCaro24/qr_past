@@ -758,6 +758,8 @@ footer {
   /* corregido */
   align-items: center;
   /* Centra las imágenes y botones */
+  text-align: center;
+  /* Centra el contenido inline-block */
   background: #ffffff;
 }
 
