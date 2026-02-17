@@ -2,14 +2,14 @@ import qrcode
 import os
 
 # Crear carpeta si no existe
-os.makedirs("qr_generado_iyrp_2026_madrid", exist_ok=True)
+os.makedirs("qr_generado_barcelo", exist_ok=True)
 
-base_url = "https://albertocaro24.github.io/qr_iyrp2026madrid/"
+base_url = "https://open.spotify.com/playlist/0Ig1hRYlEExJgrCTuzYICy"
 
 # Generar el código QR
 img = qrcode.make(base_url)
 
 # Guardar la imagen dentro de la carpeta
-img.save("qr_generado_iyrp_2026_madrid/qr_iyrp_2026_madrid.png")
+img.save("qr_generado_barcelo/qr_barcelo.png")
 
 print("QR generado correctamente.")
